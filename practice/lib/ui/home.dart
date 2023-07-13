@@ -21,8 +21,23 @@ class ScaffoldExample extends StatelessWidget{
           ],
         ),
 
-        body: const Center(
-          child: Text('Hello Again'),
+        backgroundColor: Colors.redAccent.shade200,
+
+        body:  Container(
+          alignment: Alignment.center,
+          child:  Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                InkWell(
+                  child: const Text(
+                    'Tap me',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onTap: () => debugPrint("Tapped"),
+                  
+                ),
+              ],
+          ),
         ),
       );
   }
