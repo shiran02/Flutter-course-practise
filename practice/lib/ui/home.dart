@@ -1,9 +1,12 @@
-
-
 import 'package:flutter/material.dart';
+import '../custom_button/CustomBtn.dart';
+import '../custom_button/button_1.dart';
+import '../custom_button/outlineBtn.dart';
+import '../custom_button/textBtn.dart';
 
 
 class ScaffoldExample extends StatelessWidget{
+  const ScaffoldExample({super.key});
 
   _tapButton(){
     debugPrint("Tapped Button");
@@ -21,21 +24,30 @@ class ScaffoldExample extends StatelessWidget{
           ],
         ),
 
-        backgroundColor: Colors.redAccent.shade200,
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
 
         body:  Container(
           alignment: Alignment.center,
-          child:  Column(
+          child:  const Column(
             mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                InkWell(
-                  child: const Text(
-                    'Tap me',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  onTap: () => debugPrint("Tapped"),
+
+
+               CustomButton(),
+               CustomBtn(),
+               OutlineBtn(),
+               TextBtn(),
+
+                // InkWell(
+                //   child: const Text(
+                //     'Tap me',
+                //     style: TextStyle(fontSize: 20),
+                //   ),
+                //   onTap: () => debugPrint("Tapped"),
                   
-                ),
+                // ),
+
+
               ],
           ),
         ),

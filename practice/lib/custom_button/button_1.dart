@@ -8,7 +8,26 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: (){
 
+        final snackBar = SnackBar(
+          content: Text(
+            'Hello Again',
+            style: TextStyle(color: Colors.black)
+            ),
+          backgroundColor: Colors.amberAccent.shade100,
+          );
+
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
       },
+
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child: Text('Click me'),       
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 150, 10, 243),
+          borderRadius: BorderRadius.circular(10),
+        ), 
+      ),
     );
   }
 } 

@@ -4,7 +4,7 @@ import 'package:practice/ui/home.dart';
 void main() {
 
 
-  runApp(new MaterialApp(
+  runApp(MaterialApp(
     home: ScaffoldExample(),
   ));
 
