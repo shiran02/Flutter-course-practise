@@ -9,7 +9,7 @@ class CustomButton extends StatelessWidget {
       onTap: (){
 
         final snackBar = SnackBar(
-          content: Text(
+          content: const Text(
             'Hello Again',
             style: TextStyle(color: Colors.black)
             ),
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
       },
 
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Text('Click me'),       
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 150, 10, 243),

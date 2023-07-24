@@ -24,6 +24,19 @@ class ScaffoldExample extends StatelessWidget{
           ],
         ),
 
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: null,
+          backgroundColor: Colors.amber,
+          child: Icon(Icons.call_end),
+          ),
+
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(icon: Icon(Icons.access_time) ,label:'time'),
+          BottomNavigationBarItem(icon: Icon(Icons.account_balance) ,label:'Account'),
+          BottomNavigationBarItem(icon: Icon(Icons.account_balance) ,label:'Account'),
+        ],onTap: (int index)=>("Tapped item : $index"),),
+
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
 
         body:  Container(
@@ -31,13 +44,10 @@ class ScaffoldExample extends StatelessWidget{
           child:  const Column(
             mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-
-
                CustomButton(),
                CustomBtn(),
                OutlineBtn(),
                TextBtn(),
-
                 // InkWell(
                 //   child: const Text(
                 //     'Tap me',
@@ -46,8 +56,6 @@ class ScaffoldExample extends StatelessWidget{
                 //   onTap: () => debugPrint("Tapped"),
                   
                 // ),
-
-
               ],
           ),
         ),
